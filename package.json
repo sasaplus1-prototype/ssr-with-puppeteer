@@ -1,0 +1,42 @@
+{
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "exclude": [
+            "transform-regenerator"
+          ],
+          "targets": {
+            "browsers": [
+              "last 2 versions"
+            ]
+          }
+        }
+      ],
+      "react"
+    ]
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "puppeteer": "^1.4.0",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-router": "^4.2.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "fixpack": "^2.3.1",
+    "webpack": "^4.8.1",
+    "webpack-cli": "^2.1.3"
+  },
+  "private": true,
+  "scripts": {
+    "build": "webpack --colors --display-error-details --progress",
+    "build:watch": "npm run build -- --devtool inline-source-map --watch",
+    "fixpack": "fixpack"
+  }
+}
